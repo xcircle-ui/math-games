@@ -1,18 +1,17 @@
-
+<!DOCTYPE html>
 <html>
 <head>
   <title>Home</title>
   <style>
-    
-    body { 
+    body {
       background-color: #070707;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width="100%
-      height="100%
       margin: 0;
+      height: 100vh;
+      font-family: "CustomFont", sans-serif;
     }
 
     .banner {
@@ -28,10 +27,10 @@
 
     .banner a {
       display: block;
-      width: 700px;
-      height: 300px;
-      margin-bottom: 40px;
-      border-radius: 40px;
+      width: 300px; /* Adjust the width as needed */
+      height: 150px; /* Adjust the height as needed */
+      margin-bottom: 20px; /* Adjust the margin as needed */
+      border-radius: 10px;
       overflow: hidden;
     }
 
@@ -49,58 +48,53 @@
       font-size: 45px;
       padding: 10px;
     }
-    
-    
-  </style>
-</head>
 
-<body>
-  
-  <div class="banner"> 
-    <a href="https://discord.gg/8PG4UKXkfm">
-      <img src="https://www.esportsportal.com/wp-content/uploads/2019/09/discord-banner-3-750x366.png" alt="Banner 1">
-    </a>
-    <a href="https://www.youtube.com/@Pogunblocked">
-      <img src="https://www.androidauthority.com/wp-content/uploads/2019/01/YouTube-Logo.jpg" alt="Banner 2">
-    </a>
-    <a href="https://www.tiktok.com/@pogunblocked">
-      <img src="https://cornholecentral.com/wp-content/uploads/2021/02/tiktok-banner.jpg" alt="Banner 3">
-    </a>
-  </div>
-  
-  <img src="https://i.imgur.com/Iu4CKr0.png" alt="https://i.imgur.com/Iu4CKr0.png">
-  
-  <div class="footer">
-    <p>Enter Continue</p>
-  </div>
-</body>
-</html>
+    #clickableImage {
+      width: 300px;
+      height: 300px;
+      object-fit: contain;
+      margin: 20px;
+      cursor: pointer;
+    }
 
-<html>
-<head>
-  <style>
     @font-face {
       font-family: "CustomFont";
       src: url("https://cdn.glitch.global/3554367d-1741-41ba-9419-826fce298a98/CherryBomb-Regular.otf?v=1685585796698") format("truetype");
     }
-
-    body {
-      font-family: "CustomFont", sans-serif;
-    }
   </style>
 </head>
-</html>
+<body>
+  <div class="banner"> 
+    <a href="https://discord.com/invite/8PG4UKXkfm" onclick="openInNewTab(event, 'https://discord.com/invite/8PG4UKXkfm')"><img src="https://www.esportsportal.com/wp-content/uploads/2019/09/discord-banner-3-750x366.png" alt="Banner Image 1"></a>
+    <a href="https://www.youtube.com/@Pogunblocked" onclick="openInNewTab(event, 'https://www.youtube.com/@Pogunblocked')"><img src="https://www.androidauthority.com/wp-content/uploads/2019/01/YouTube-Logo.jpg" alt="Banner Image 2"></a>
+    <a href="https://www.tiktok.com/@pogunblocked" onclick="openInNewTab(event, 'https://www.tiktok.com/@pogunblocked')"><img src="https://cornholecentral.com/wp-content/uploads/2021/02/tiktok-banner.jpg" alt="Banner Image 3"></a>
+    <a href="https://connorszgamegamin.itch.io/" onclick="openInNewTab(event, 'https://connorszgamegamin.itch.io/')"><img src="AA.png" alt="Banner Image 4"></a>
+  </div>
+  
+  <img id="clickableImage" src="https://i.imgur.com/Iu4CKr0.png" alt="Clickable Image">
+  
+  <div class="footer">
+    <p>click home 3 times!</p>
+  </div>
 
-<html>
-<head>
   <script>
-    document.addEventListener("keydown", function(event) {
-      if (event.key === "Enter") {
-        window.location.href = "https://pogmath.glitch.me/";
+    function openInNewTab(event, url) {
+      event.preventDefault();
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+
+    var clickCount = 0;
+    var clickableImage = document.getElementById("clickableImage");
+
+    clickableImage.addEventListener("click", function() {
+      clickCount++;
+
+      if (clickCount === 3) {
+        window.location.href = "https://lightofsnow1.github.io/SevereFractalActivecell/game.html";
       }
     });
-    
   </script>
-  
-</head>
+</body>
 </html>
+
+
